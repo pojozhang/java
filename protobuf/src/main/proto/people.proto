@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+package example.protobuf.people;
+
+message People {
+    reserved 6 to 9;
+    reserved "address";
+
+    uint32 age = 1;
+    string name = 2;
+    //string address = 3; compile error: field is reserved
+    Gender gender = 4;
+    repeated string phone = 10;
+
+    enum Gender {
+        MALE = 0;
+        FEMALE = 1;
+    }
+}
+
