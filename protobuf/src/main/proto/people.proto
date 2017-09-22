@@ -13,8 +13,11 @@ message People {
     repeated string phone = 10;
 
     enum Gender {
+        option allow_alias = true;
         MALE = 0;
+        MAN = 0;
         FEMALE = 1;
+        OTHER = 2;
     }
 }
 
