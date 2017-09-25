@@ -1,8 +1,8 @@
 package example.protobuf;
 
 import com.google.protobuf.Any;
+import example.protobuf.people.People;
 import example.protobuf.people.ResponseOuterClass.Response;
-import example.protobuf.people.PeopleOuterClass.People;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 
@@ -22,5 +22,6 @@ public class Main {
         System.out.println(p.getName());
         System.out.println(p.getAge());
         System.out.println(p.getBirthDate());
+
     }
 }

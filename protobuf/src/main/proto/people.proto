@@ -3,6 +3,7 @@ syntax = "proto3";
 import "old_address.proto";
 
 package example.protobuf.people;
+option java_multiple_files = true;
 
 message People {
     reserved 6 to 9;
@@ -15,7 +16,7 @@ message People {
     //string address = 3; compile error: field is reserved
     Gender gender = 4;
     Address address = 5;
-    repeated string phone = 10;
+    repeated string phone = 10 [deprecated = true];
 
     enum Gender {
         option allow_alias = true;
