@@ -8,6 +8,7 @@ buildscript {
     }
 }
 
+apply plugin: 'idea'
 apply plugin: 'java'
 apply plugin: 'com.google.protobuf'
 
@@ -22,5 +23,11 @@ dependencies {
 protobuf {
     protoc {
         artifact = "com.google.protobuf:protoc:$protobufVersion"
+    }
+}
+
+idea {
+    module {
+        sourceDirs += file("${protobuf.generatedFilesBaseDir}/main/java")
     }
 }
