@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+import "country.proto";
+
+package example.protobuf.people;
+
+message Address {
+    Country country = 1;
+}

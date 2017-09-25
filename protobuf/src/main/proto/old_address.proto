@@ -1,0 +1,5 @@
+syntax = "proto3";
+
+import public "new_address.proto";
+
+package example.protobuf.people;

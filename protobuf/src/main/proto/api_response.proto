@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+import "google/protobuf/any.proto";
+
+package example.protobuf.people;
+
+message ApiResponse {
+    google.protobuf.Any data = 1;
+}
