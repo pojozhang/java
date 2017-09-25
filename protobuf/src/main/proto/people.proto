@@ -7,7 +7,10 @@ package example.protobuf.people;
 message People {
     reserved 6 to 9;
 
-    uint32 age = 1;
+    oneof age_oneof {
+        uint32 age = 1;
+        uint64 birth_date = 11;
+    }
     string name = 2;
     //string address = 3; compile error: field is reserved
     Gender gender = 4;
