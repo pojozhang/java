@@ -22,6 +22,5 @@ public class Main {
         System.out.println(p.getName());
         System.out.println(p.getAge());
         System.out.println(p.getBirthDate());
-
     }
 }
